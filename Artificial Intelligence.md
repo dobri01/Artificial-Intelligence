@@ -83,7 +83,7 @@ The new product rule if $A \perp\!\!\!\perp B|C$ is $$P(A_i \cap ... \cap A_n) =
 ### Random variables
 A random variable $X$ is a function $X:\Omega \implies R$ that maps an outcome $\xi \in \Omega$ to a number $X(\xi)\in R$. We use $X(\Omega)$ or $R_X$ to denote the range of $X(\Omega) = \{X(\xi) : \xi \in \Omega\}$. The range consists of all the possible realisations of a random variable in the experiment. **We have two types of random variables depending on the range:**
 - X is a discrete random variable if $X(\Omega)$ is **countable**
-- X is a continuous random variable if $X(\Omega)$ is **uncountable**
+- X is a [[Artificial Intelligence#Continuous Random Variables|continuous random variable]] if $X(\Omega)$ is **uncountable**
 ### Probability Mass Function - PMF
 The **Probability Mass Function** is the probability for a random variable **X** to take a value **a**
 $$P_X(a) = P(X=a)$$
@@ -156,7 +156,7 @@ $$P(\{X \in A \})=\sum_{x \in A} P_X(x)$$
 
 #### Probability Density Function - PDF
 
-Let $X$ be *continuous random variable*. The probability density function of $X$ is a function $f_X:R\implies R_+$ when integrated over an interval $[a,b]$, yields the probability of obtaining $a\leq X\leq b$
+Let $X$ be [[Artificial Intelligence#Continuous Random Variables|continuous random variable]]. The probability density function of $X$ is a function $f_X:R\implies R_+$ when integrated over an interval $[a,b]$, yields the probability of obtaining $a\leq X\leq b$
 $$P(a \leq X \leq b) = \int_a^b f_x(x) ~~dx$$
 
 
@@ -217,7 +217,7 @@ $$\text{The PDF and CDF of } X \sim Exponential(\lambda)$$
 We say $X$ is a Gaussian random variable if the [[Artificial Intelligence#Probability Density Function - PDF|PDF]] is
 $$\huge f_{X}(x)=\frac{1}{\root  \of {2 \pi \sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^{2}}}$$
 where $(\mu , \sigma ^{2})$ are the parameters of the distribution.  We write that
-$$X \sim Gaussian(\mu,\sigma^{2}) ~ ~ ~ ~ $$
+$$X \sim Gaussian(\mu,\sigma^{2}) ~ ~ ~ ~ or~ ~ ~ ~ X \sim N(\mu,\sigma^{2})$$
 We can see that the two parameters control the shape of the Gaussian random variable. If $X \sim Gaussian(\mu,\sigma^{2})$ then
 - it is symmetric around $\mu$
 - $\sigma ^{2}$ determines how sharply the variable is around its centre 
@@ -227,4 +227,15 @@ We can see that the two parameters control the shape of the Gaussian random vari
 #### Standard Gaussian Random Variable
 We say $X$ is a **standard** Gaussian random variable if the [[Artificial Intelligence#Probability Density Function - PDF|PDF]] is
 $$\huge f_{X}(x) = \frac{1}{\root \of {2 \pi}} e^{-\frac{x^{2}}{2 \sigma^{2}}}$$
+That is, $X\sim N(0,1)$ is Gaussian with $\mu=0$ and $\sigma ^{2}= 1$. The [[Artificial Intelligence#Cumulative Distribution Function - CDF|CDF]] of the standard Gaussian is
+$$\huge \phi (x) = F_{X}(x) =\frac{1}{\root \of {2 \pi}}\int_{-\infty}^{x}e^{-\frac{t^{2}}{2}}dt $$
+![[Pasted image 20220311170652.png]]
 
+#### Central Limit Theorem
+[[Artificial Intelligence#Gaussian Random Variable|Gaussian random variables]] appear if we consider a summation of [[Artificial Intelligence#Random variables|independent random variables]]. When we sum many independent random variables, the resulting random variable is a Gaussian. This is known as the *Central Limit Theorem*.
+
+Binomial Distribution as n approaches *Infinity*
+
+![[Pasted image 20220311172552.png]]
+
+This shows that the summation of n independent Bernoulli random variables converge to a Gaussian random variable as n goes to infinity.
