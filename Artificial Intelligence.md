@@ -63,7 +63,7 @@ $$P(A \cap B \cap C) = P(A)P(B)P(C)$$
 #### Application of INDEPENDENCY
 If $A_1, ..., A_n$ are independent, the [[Artificial Intelligence#Product Rule|product rule]] can be simplified as follows $$P(A_1, \cap ... \cap A_n) = P(A_1)P(A_2)...P(A_n)$$
 #### Independence and DISJOINTNESS
-![[Pasted image 20220303160218.png]]
+![[Pasted image 20220303160218.png|]]
 - If A and F are **independent** then $P(E \cap F) = P(E)P(F)$. Let us consider the left figure. $$Left:\quad P(E) = \frac {2}{6}\quad P(F) = \frac{3}{6}\quad P(E \cap F) = \frac{1}{6}$$
 This shows the independency between E and F. However, E and F are not disjoint.
 - If E and F are disjoint then $P(E \cap F) = P(\emptyset) = 0$. Let us consider the right figure. $$Right:\quad P(E) = \frac {2}{6} \quad P(F) = \frac {4}{6} \quad P(E \cap F) = 0$$
@@ -98,7 +98,7 @@ A PMF $P_X$ should satisfy the condition $\sum_{x \in X(\Omega)}P_X = 1$.
 ### Cumulative Distribution Function - CDF
 The Cumulative Distribution Function $F_X(x)$ is the probability for the [[Artificial Intelligence#Random variables|random variable]] $X$ to be at most $x$.
 $$F_X(x) = P(X \leq x)$$
-![[Pasted image 20220311113058.png]]
+![[Pasted image 20220311113058.png|]]
 It is interesting to show the connection between [[Artificial Intelligence#Probability Density Function - PDF|PDF]] and *CDF*. One can get the other quantity if given an quantity: one direction is by integration and the other is by differentiation.
 #### Remark
 - If $X$ is a [[Artificial Intelligence#Continuous Random Variables|continuous random variable]] and $a\leq b$, then **integrate**
@@ -149,7 +149,7 @@ $$P(\{X \in A \})=\sum_{x \in A} P_X(x)$$
 - the probability of $X \in A$ is computed via *an integral* over A for *continuous random variables*
 - the probability of $X \in A$ is computer via *a summation* over A for *discrete variables*
 
-![[Pasted image 20220310235514.png]]
+![[Pasted image 20220310235514.png|]]
 
 *(Left)* A probability mass function ([[Artificial Intelligence#Probability Mass Function - PMF|PMF]]) tells us the relative frequency of a state when computing the probability.
 *(Right)* A probability density function ([[Definitions#Probability Density Function - PDF|PDF]] or [[Artificial Intelligence#Probability Density Function - PDF|PDF]]) is the infinite [[Definitions#Infinitesimal|infinitesimal ]] version of the [[Artificial Intelligence#Probability Mass Function - PMF|PMF]]. Thus the "size" of A is the integration over the [[Definitions#Probability Density Function - PDF|PDF]].
@@ -174,7 +174,7 @@ $$
 
 We write $X \sim Uniform(a,b)$
 
-![[Pasted image 20220311113023.png]]
+![[Pasted image 20220311113023.png|]]
 The [[Artificial Intelligence#Cumulative Distribution Function - CDF|CDF]] of a uniform random variable is
 
 $$ F_x(x) =
@@ -185,7 +185,7 @@ $$ F_x(x) =
 \end{cases}
 $$
 
-#### Exponential Random Variable - memoryless property
+#### Exponential Random Variable - MEMORYLESS property
 Exponential random variable occurs if a random variable has the **memoryless of exponential random variable** property
 $$P(X>x+a |X>a) = P(X>x)$$
 Exponential random variables are often used to model the waiting time of some events.
@@ -209,4 +209,22 @@ F_{X}(x) =
 1 - e^{-\lambda x} & ,otherwise
 \end{cases}
 $$
-![[Pasted image 20220311144825.png]]
+![[Pasted image 20220311144825.png|]]
+$$\text{The PDF and CDF of } X \sim Exponential(\lambda)$$ 
+
+**Observation:** The memoryless of exponential random variables only depends on $x$ and not on $a$.
+#### Gaussian Random Variable
+We say $X$ is a Gaussian random variable if the [[Artificial Intelligence#Probability Density Function - PDF|PDF]] is
+$$\huge f_{X}(x)=\frac{1}{\root  \of {2 \pi \sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^{2}}}$$
+where $(\mu , \sigma ^{2})$ are the parameters of the distribution.  We write that
+$$X \sim Gaussian(\mu,\sigma^{2})$$
+We can see that the two parameters control the shape of the Gaussian random variable. If $X \sim Gaussian(\mu,\sigma^{2})$ then
+- it is symmetric around $\mu$
+- $\sigma ^{2}$ determines how sharply the variable is around its centre 
+
+ ![[Pasted image 20220311152033.png]]
+
+#### Standard Gaussian Random Variable
+We say $X$ is a **standard** Gaussian random variable if the [[Artificial Intelligence#Probability Density Function - PDF|PDF]] is
+$$\huge f_{X}(x) = \frac{1}{\root \of {2 \pi}} e^{-\frac{x^{2}}{2 \sigma^{2}}}$$
+

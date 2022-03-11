@@ -21,7 +21,7 @@
       {
         "id": "c30ff268281e3411",
         "type": "leaf",
-        "dimension": 57.531519575315194,
+        "dimension": 28.765759787657597,
         "state": {
           "type": "markdown",
           "state": {
@@ -29,6 +29,18 @@
             "mode": "preview",
             "backlinks": false,
             "source": true
+          }
+        },
+        "group": "334374b35d3842ba"
+      },
+      {
+        "id": "0b7cc4ca3e0a20c3",
+        "type": "leaf",
+        "dimension": 28.765759787657597,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Artificial Intelligence.md"
           }
         },
         "group": "334374b35d3842ba"
@@ -71,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 150,
-    "collapsed": true
+    "width": 150
   },
   "right": {
     "id": "eb37a3df310628e9",
@@ -143,9 +154,9 @@
   "active": "c8d3f94abe7dd2e8",
   "lastOpenFiles": [
     "Artificial Intelligence.md",
+    "Definitions.md",
     "Pasted image 20220311112959.png",
     "Pasted image 20220311112950.png",
-    "Pasted image 20220311112851.png",
-    "Definitions.md"
+    "Pasted image 20220311112851.png"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "baseFontSize": 15,
+  "baseFontSize": 16,
   "cssTheme": "Things",
   "enabledCssSnippets": [
     "cooler-checkboxes",
@@ -9,9 +9,9 @@
     "subtle-sidebar",
     "subtle-scrollbar",
     "subtle-header",
-    "image-centered",
     "hide-status-bar",
-    "hide-right-sidebar"
+    "hide-right-sidebar",
+    "image-centered"
   ],
   "theme": "obsidian",
   "translucency": false
