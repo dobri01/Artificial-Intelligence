@@ -6,7 +6,7 @@
       {
         "id": "c8d3f94abe7dd2e8",
         "type": "leaf",
-        "dimension": 42.468480424684806,
+        "dimension": 34.92063492063492,
         "state": {
           "type": "markdown",
           "state": {
@@ -21,7 +21,7 @@
       {
         "id": "c30ff268281e3411",
         "type": "leaf",
-        "dimension": 28.765759787657597,
+        "dimension": 43.28042328042328,
         "state": {
           "type": "markdown",
           "state": {
@@ -36,7 +36,7 @@
       {
         "id": "0b7cc4ca3e0a20c3",
         "type": "leaf",
-        "dimension": 28.765759787657597,
+        "dimension": 21.798941798941797,
         "state": {
           "type": "outline",
           "state": {
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 150
+    "width": 150,
+    "collapsed": true
   },
   "right": {
     "id": "eb37a3df310628e9",
