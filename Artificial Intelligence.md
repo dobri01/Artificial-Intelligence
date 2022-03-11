@@ -209,3 +209,4 @@ F_{X}(x) =
 1 - e^{-\lambda x} & ,otherwise
 \end{cases}
 $$
+![[Pasted image 20220311144825.png]]
