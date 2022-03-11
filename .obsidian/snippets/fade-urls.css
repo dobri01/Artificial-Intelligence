@@ -1,0 +1,10 @@
+/* hide formatting tags when line is not active */
+/*
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-link
+*/
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-string.cm-url,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-link
+{ opacity: 0.3; }
+/* except list and quote markers, which should appear everytime */
+span.cm-formatting-list, span.cm-formatting-quote { display: inline !important; }

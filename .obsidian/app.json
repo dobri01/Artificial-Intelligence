@@ -1,0 +1,31 @@
+{
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "Additivity",
+    "Independency",
+    "independency",
+    "Disjointness",
+    "iff"
+  ],
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "showLineNumber": false,
+  "legacyEditor": false,
+  "readableLineLength": true,
+  "autoPairBrackets": true,
+  "useTab": true,
+  "alwaysUpdateLinks": true,
+  "spellcheckLanguages": [
+    "en-GB"
+  ],
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "autoConvertHtml": true,
+  "vimMode": false,
+  "smartIndentList": true,
+  "autoPairMarkdown": true
+}

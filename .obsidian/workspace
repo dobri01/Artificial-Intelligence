@@ -1,0 +1,151 @@
+{
+  "main": {
+    "id": "ae399ccaf36628c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8d3f94abe7dd2e8",
+        "type": "leaf",
+        "dimension": 42.468480424684806,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Artificial Intelligence.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
+          }
+        },
+        "group": "334374b35d3842ba"
+      },
+      {
+        "id": "c30ff268281e3411",
+        "type": "leaf",
+        "dimension": 57.531519575315194,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Artificial Intelligence.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": true
+          }
+        },
+        "group": "334374b35d3842ba"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e3ea460895356381",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3074308b9fe7c66",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "163e20438a33b707",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "4e8342202641fad1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "CDF",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 150,
+    "collapsed": true
+  },
+  "right": {
+    "id": "eb37a3df310628e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "008c246185e0e336",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "272eea6dc75f067b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7aa86d5c9fae7a36",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Artificial Intelligence.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3b84ffb5d04d73e4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Artificial Intelligence.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b3569784039e4f04",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Artificial Intelligence.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 369,
+    "collapsed": true
+  },
+  "active": "c8d3f94abe7dd2e8",
+  "lastOpenFiles": [
+    "Artificial Intelligence.md",
+    "Pasted image 20220311112959.png",
+    "Pasted image 20220311112950.png",
+    "Pasted image 20220311112851.png",
+    "Definitions.md"
+  ]
+}

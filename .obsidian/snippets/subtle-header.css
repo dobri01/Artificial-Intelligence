@@ -1,0 +1,23 @@
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
+	background: transparent;
+}
+
+.view-header:not(:hover) {
+	background: var(--background-primary);
+}
+
+.view-header-icon {
+	display: none;
+}
+
+.view-header-title {
+	padding-left: 1rem;
+}
+
+.view-actions {
+	opacity: 0.1;
+}
+
+.view-header:hover .view-actions {
+	opacity: 1;
+}

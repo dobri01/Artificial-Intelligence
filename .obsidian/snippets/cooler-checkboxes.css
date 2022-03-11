@@ -1,0 +1,7 @@
+/* https://forum.obsidian.md/t/clutter-free-edit-mode/6791/66 */
+.CodeMirror-line span.cm-formatting-task.cm-property {
+  color: var(--purple);
+}
+.CodeMirror-line span.cm-formatting-task.cm-property ~ * {
+  text-decoration: line-through;
+}

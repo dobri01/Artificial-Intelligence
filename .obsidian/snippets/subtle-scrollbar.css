@@ -1,0 +1,5 @@
+.theme-light {
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-bg: rgba(0, 0, 0, 0.02);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.04);
+}

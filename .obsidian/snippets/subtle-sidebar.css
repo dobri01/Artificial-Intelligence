@@ -1,0 +1,13 @@
+.side-dock-ribbon {
+  transition-property: all;
+}
+
+.side-dock-ribbon.mod-left {
+  border-right-color: transparent;
+}
+
+.side-dock-ribbon.mod-left:not(:hover),
+.side-dock-ribbon.mod-right:not(:hover) {
+  opacity: 0.1;
+  background: var(--background-primary);
+}

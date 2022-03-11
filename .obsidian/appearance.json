@@ -1,0 +1,18 @@
+{
+  "baseFontSize": 15,
+  "cssTheme": "Things",
+  "enabledCssSnippets": [
+    "cooler-checkboxes",
+    "fade-emphasis",
+    "cooler-fonts",
+    "fade-urls",
+    "subtle-sidebar",
+    "subtle-scrollbar",
+    "subtle-header",
+    "image-centered",
+    "hide-status-bar",
+    "hide-right-sidebar"
+  ],
+  "theme": "obsidian",
+  "translucency": false
+}

@@ -1,0 +1,4 @@
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-em,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-strong {
+  opacity: 0.2;
+}
