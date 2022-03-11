@@ -231,7 +231,7 @@ That is, $X\sim N(0,1)$ is Gaussian with $\mu=0$ and $\sigma ^{2}= 1$. The [[Art
 $$\huge \phi (x) = F_{X}(x) =\frac{1}{\root \of {2 \pi}}\int_{-\infty}^{x}e^{-\frac{t^{2}}{2}}dt $$
 ![[Pasted image 20220311170652.png]]
 
-#### Central Limit Theorem
+#### Central Limit Theorem - Origin of Gaussian 
 [[Artificial Intelligence#Gaussian Random Variable|Gaussian random variables]] appear if we consider a summation of [[Artificial Intelligence#Random variables|independent random variables]]. When we sum many independent random variables, the resulting random variable is a Gaussian. This is known as the *Central Limit Theorem*.
 
 Binomial Distribution as n approaches *Infinity*
