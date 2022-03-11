@@ -217,7 +217,7 @@ $$\text{The PDF and CDF of } X \sim Exponential(\lambda)$$
 We say $X$ is a Gaussian random variable if the [[Artificial Intelligence#Probability Density Function - PDF|PDF]] is
 $$\huge f_{X}(x)=\frac{1}{\root  \of {2 \pi \sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^{2}}}$$
 where $(\mu , \sigma ^{2})$ are the parameters of the distribution.  We write that
-$$X \sim Gaussian(\mu,\sigma^{2}) ~ ~ ~ ~ d$$
+$$X \sim Gaussian(\mu,\sigma^{2}) ~ ~ ~ ~ $$
 We can see that the two parameters control the shape of the Gaussian random variable. If $X \sim Gaussian(\mu,\sigma^{2})$ then
 - it is symmetric around $\mu$
 - $\sigma ^{2}$ determines how sharply the variable is around its centre 
