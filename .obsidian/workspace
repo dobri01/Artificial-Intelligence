@@ -6,7 +6,7 @@
       {
         "id": "c8d3f94abe7dd2e8",
         "type": "leaf",
-        "dimension": 33.99734395750332,
+        "dimension": 29.681274900398407,
         "state": {
           "type": "markdown",
           "state": {
@@ -16,12 +16,12 @@
             "source": true
           }
         },
-        "group": "334374b35d3842ba"
+        "group": "d2368f4200da9d2a"
       },
       {
         "id": "c30ff268281e3411",
         "type": "leaf",
-        "dimension": 44.223107569721115,
+        "dimension": 41.96547144754316,
         "state": {
           "type": "markdown",
           "state": {
@@ -31,19 +31,19 @@
             "source": true
           }
         },
-        "group": "334374b35d3842ba"
+        "group": "d2368f4200da9d2a"
       },
       {
         "id": "0b7cc4ca3e0a20c3",
         "type": "leaf",
-        "dimension": 21.779548472775563,
+        "dimension": 28.353253652058434,
         "state": {
           "type": "outline",
           "state": {
             "file": "Artificial Intelligence.md"
           }
         },
-        "group": "334374b35d3842ba"
+        "group": "d2368f4200da9d2a"
       }
     ],
     "direction": "vertical"
@@ -70,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CDF",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,7 +79,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",

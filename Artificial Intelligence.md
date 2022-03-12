@@ -81,7 +81,7 @@ $$P(A|B,C)=P(A|C)$$
 The new product rule if $A \perp\!\!\!\perp B|C$ is $$P(A_i \cap ... \cap A_n) = P(A_i)P(A_2|A_1)P(A_3|A_2)...P(A_n|A_{n-1})$$
 ## Week 3
 ### Random variables
-A random variable $X$ is a function $X:\Omega \implies R$ that maps an outcome $\xi \in \Omega$ to a number $X(\xi)\in R$. We use $X(\Omega)$ or $R_X$ to denote the range of $X(\Omega) = \{X(\xi) : \xi \in \Omega\}$. The range consists of all the possible realisations of a random variable in the experiment. **We have two types of random variables depending on the range:**
+A (discrete) random variable $X$ is a function $X:\Omega \implies R$ that maps an outcome $\xi \in \Omega$ to a number $X(\xi)\in R$. We use $X(\Omega)$ or $R_X$ to denote the range of $X(\Omega) = \{X(\xi) : \xi \in \Omega\}$. The range consists of all the possible realisations of a random variable in the experiment. **We have two types of random variables depending on the range:**
 - X is a discrete random variable if $X(\Omega)$ is **countable**
 - X is a [[Artificial Intelligence#Continuous Random Variables|continuous random variable]] if $X(\Omega)$ is **uncountable**
 ### Probability Mass Function - PMF
@@ -100,11 +100,15 @@ The Cumulative Distribution Function $F_X(x)$ is the probability for the [[Artif
 $$F_X(x) = P(X \leq x)$$
 ![[Pasted image 20220311113058.png|]]
 It is interesting to show the connection between [[Artificial Intelligence#Probability Density Function - PDF|PDF]] and *CDF*. One can get the other quantity if given an quantity: one direction is by integration and the other is by differentiation.
-#### Remark
+### From PDF to CDF and backwards
 - If $X$ is a [[Artificial Intelligence#Continuous Random Variables|continuous random variable]] and $a\leq b$, then **integrate**
 $$\int_a^b f_x(x) ~ dx = P(a \leq X \leq b) = F_X(b) - F_X(a)$$
 - If $F_X$ is [[Definitions#Differentiable|differentiable]] at x, then **derivate**
 $$f_X(x) = \frac{dF_X(x)}{dx} = \frac{d}{dx} \int _{-\infty}^x f_X(y) ~ dy$$
+
+In other words
+- We **integrate** the [[Artificial Intelligence#Probability Density Function - PDF|PDF]] to get the [[Artificial Intelligence#Cumulative Distribution Function - CDF|CDF]]
+- We **derivate** the [[Artificial Intelligence#Cumulative Distribution Function - CDF|CDF]] to get the [[Artificial Intelligence#Probability Density Function - PDF|PDF]]
 #### Proprieties
 - $F_X(x)$ is a **non decreasing function** of x
 - $F_X(-\infty)=0$ and $F_X(\infty) = 1$
@@ -154,10 +158,11 @@ $$P(\{X \in A \})=\sum_{x \in A} P_X(x)$$
 *(Left)* A probability mass function ([[Artificial Intelligence#Probability Mass Function - PMF|PMF]]) tells us the relative frequency of a state when computing the probability.
 *(Right)* A probability density function ([[Definitions#Probability Density Function - PDF|PDF]] or [[Artificial Intelligence#Probability Density Function - PDF|PDF]]) is the infinite [[Definitions#Infinitesimal|infinitesimal ]] version of the [[Artificial Intelligence#Probability Mass Function - PMF|PMF]]. Thus the "size" of A is the integration over the [[Definitions#Probability Density Function - PDF|PDF]].
 
-#### Probability Density Function - PDF
+### Probability Density Function - PDF
 
 Let $X$ be [[Artificial Intelligence#Continuous Random Variables|continuous random variable]]. The probability density function of $X$ is a function $f_X:R\implies R_+$ when integrated over an interval $[a,b]$, yields the probability of obtaining $a\leq X\leq b$
 $$P(a \leq X \leq b) = \int_a^b f_x(x) ~~dx$$
+**Observation** as the integration of the PDF is the probability, for it to be **well defined** it has to be equal to 1 (given complete range)
 
 
 ### Common Continuous Random Variables
