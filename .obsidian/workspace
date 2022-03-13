@@ -4,46 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "c8d3f94abe7dd2e8",
+        "id": "fc85de8c3fbc1c65",
         "type": "leaf",
-        "dimension": 29.681274900398407,
+        "dimension": 53.64431486880466,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Artificial Intelligence.md",
+            "file": "Part2.md",
             "mode": "source",
             "backlinks": false,
             "source": true
           }
         },
-        "group": "d2368f4200da9d2a"
+        "group": "b35203c7f6d530d0"
       },
       {
-        "id": "c30ff268281e3411",
+        "id": "672735015ee80c0a",
         "type": "leaf",
-        "dimension": 41.96547144754316,
+        "dimension": 46.35568513119532,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Artificial Intelligence.md",
+            "file": "Part2.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
           }
         },
-        "group": "d2368f4200da9d2a"
-      },
-      {
-        "id": "0b7cc4ca3e0a20c3",
-        "type": "leaf",
-        "dimension": 28.353253652058434,
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "Artificial Intelligence.md"
-          }
-        },
-        "group": "d2368f4200da9d2a"
+        "group": "b35203c7f6d530d0"
       }
     ],
     "direction": "vertical"
@@ -79,12 +67,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 150,
+    "width": 242,
     "collapsed": true
   },
   "right": {
@@ -112,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Artificial Intelligence.md",
+                "file": "Part2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Artificial Intelligence.md",
+                "file": "Part2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Artificial Intelligence.md"
+                "file": "Part2.md"
               }
             }
           }
@@ -153,12 +140,17 @@
     "width": 369,
     "collapsed": true
   },
-  "active": "c8d3f94abe7dd2e8",
+  "active": "fc85de8c3fbc1c65",
   "lastOpenFiles": [
-    "Artificial Intelligence.md",
+    "Part2.md",
+    "Probability.md",
+    "README.md",
+    "Images/Pasted image 20220313144832.png",
+    "Pasted image 20220313144734.png",
+    "Images/Pasted image 20220313142501.png",
     "Definitions.md",
-    "Pasted image 20220311112959.png",
-    "Pasted image 20220311112950.png",
-    "Pasted image 20220311112851.png"
+    "Images/Pasted image 20220303160218.png",
+    "Images/Pasted image 20220311170652.png",
+    "Images/Pasted image 20220311152033.png"
   ]
 }

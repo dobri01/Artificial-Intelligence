@@ -27,5 +27,7 @@
   "autoConvertHtml": true,
   "vimMode": false,
   "smartIndentList": true,
-  "autoPairMarkdown": true
+  "autoPairMarkdown": true,
+  "livePreview": false,
+  "useMarkdownLinks": false
 }
