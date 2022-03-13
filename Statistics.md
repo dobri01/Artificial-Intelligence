@@ -45,7 +45,7 @@ $$P_{X,Y}(x,y) = P_{X}(x) P_{Y}(y)$$
 We say two [[Probability#Continuous Random Variables|continuous random variables]] $X$ and $Y$ are **independent** iff
 $$f_{X,Y}(x,y)=f_{X}(x) f_{Y}(y)$$
 ### Independence for multiple variables
-We say a sequence of random variables $X_{1}, X_{2}, \dots, X_{N}$ are independent iff the [[Part2#Joint PDF|joint PDF]] can be factorised
+We say a sequence of random variables $X_{1}, X_{2}, \dots, X_{N}$ are independent iff the [[Statistics#Joint PDF|joint PDF]] can be factorised
 $$f_{X_{1},\dots, X_{N}}(x_{1}, \dots ,x_{N)}= \prod_{n=1}^{N}f_{X_{n}}(x_n)$$
 
 ## Conditional PMF and Conditional PDF
@@ -60,7 +60,7 @@ $$
 
 Let $X$ and $Y$ be two [[Probability#Discrete Random variables| discrete random variables]]. **The conditional PMF** of $X$ given $Y$ is
 $$P_{X|Y}(x|y) = \frac{P_{X,Y}(x,y)}{P_{Y}(y)}$$
-According to the definition, *the conditional PMF* is the division of [[Part2#Joint PMF|the joint PMF]] and [[Part2#Marginal PMF and Marginal PDF|the marginal PMF]].
+According to the definition, *the conditional PMF* is the division of [[Statistics#Joint PMF|the joint PMF]] and [[Statistics#Marginal PMF and Marginal PDF|the marginal PMF]].
 
 ![[Pasted image 20220313144832.png]]
 
@@ -70,6 +70,70 @@ $$f_{X|Y}(x|y) = \frac{f_{X,Y}(x,y)}{f_{Y}(y)}$$
 **The conditional PMF** can be interpreted as the [[Probability#Conditional Probability|conditional probability]] per unit. Therefore, **the conditional PDF** can take values larger than 1. This is consistent with the fact that PDF can be interpreted as the probability per unit.
 
 ## Statistical Inference
+
+### Descriptive Statistics
+ Descriptive Statistics refers to a summary that quantitatively describes features from a collection of information, which does not assume that the data comes from a larger population.
+ - **Central tendency**: expectation (mean), [[Definitions#Median|median]], mode. 
+ - **Dispersion**: the range and [[Definitions#Quartile|quartiles]] of the dataset
+- **Spread**: variance and standard deviation. 
+- **Shape of the distribution**: [[Definitions#Skewness|skewness]] and [[Definitions#Kurtosis|kurtosi]]
+
+### Expectation
+The expectation of a random variable $X$ is
+$$E[X] = \sum\limits_{x\in X(\Omega)} x P_{X}(x)$$
+Where:
+- $x\in X(\Omega)$ is the sum over all states
+-  $x$ = the state X takes
+- $P_{X}(x)$ is the percentage
+
+The expectation gives the value we expect for a [[Probability#Discrete Random variables|  random variables]] before implementing an experiment.
+
+
+#### Linearity of expectation
+$$E[X] = E[X_{1}+X_{2}+X_{3}] = E[X_{1}]+ E[X_{2}]+ E[X_{3}]$$
+
+#### Sample Mean and Expectation
+Suppose we repeatedly do the same random experiment. This leads to n random variables $X_{i}, ~i\in [n]$ with the same [[Probability#Probability Mass Function - PMF|PMF]].
+We can define the **Sample mean** $\bar{X}_{n}$ as
+$$\bar{X}_{n} = \frac{1}{n} \sum\limits_{i=1}^{n}X_{i}$$
+##### The difference between Sample mean and Expectation
+**Expectation** $E[X]$
+- A statistical property of a [[Probability#Discrete Random variables|random variable]].
+- A deterministic number independent of implementation of the experiment. 
+- Often unknown, or is the center question of estimation. It is a quantity about the population.
+
+**Sample Mean** $\bar{X}_{n}$
+- A numerical value. Calculated from data
+- Itself is a [[Probability#Discrete Random variables|random variable]]. Note is is an average of $X_{i}$, each of which is a [[Probability#Discrete Random variables|random variable]].
+- It had uncertainty. The uncertainty reduces as more samples are used. The reason is that the randomisation is likely to offset each other with more experiments.
+- We can use sample mean to estimate the expectation: the expectation cannot be computed from the data, while the sample mean can.
+### Variance and standard deviation
+Variance, $Var(X)$ is the expected value of the squared derivations
+$$Var(X) = E[\triangle^{2}] =E[(X-\mu)^{2}] = E[(X-E[X])^{2}]$$
+
+The **Standard Deviation** - $\sigma$ is the square-root of the variance:
+$$\sigma = \root \of {E[\triangle ^2]}$$
+If the variance is large, then this means that the derivation $\triangle$ can be large with high probability. If the variance is small, then the deviation $\triangle$ would be small with high probability.
+
+**Therefore, the variance measures the uncertainty of a random variable.**
+
+**Variance is a measure of risk**: if the variance $X$ is larger it has more uncertainty. 
+
+#### Proprieties of Variance
+Let $X$ be a random variable. Then we have the following property
+1. Variance is the expectation of square minus the square of expectation
+$$Var(X) = E[X^{2}]- (E[X])^{2}$$
+2. Scale. For any constant c
+$$Var(cX) = c^{2}Var(X)$$
+3. Shift. For any constant c
+$$Var(X+c) = Var(X)$$
+4. If $X$ and $Y$ are [[Probability#Independence|independent]] then
+$$Var(X+Y)= Var(X) + Var(Y)$$
+
+
+### Continuous Random Variables
+
+
 
 ---
 Resources
