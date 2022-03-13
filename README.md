@@ -4,3 +4,5 @@
   - CSS snippets
   - Theme
   - Plugins
+  - References
+  - Images
