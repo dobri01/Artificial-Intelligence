@@ -40,3 +40,15 @@ Skewness is a measure of asymmetry of the probability distribution of a real-val
 Kurtosis is a measure of the tailedness of the probability distribution of a real-valued  [[Probability#Discrete Random variables|random variable]]. Like [[Definitions#Skewness|skewness]], kurtosis describes the shape of a probability distribution and there are different ways of quantifying it for a theoretical distribution and corresponding ways of estimating it from a sample from a population.
 
 ![[kurtosis.png]]
+
+# Population
+Population is the universe to which we wish to generalise. In the population, we have parameters which are true (fixed) unknown values we wish to estimate (infer).
+
+## Sample
+The sample is the finite study we perform to collect data.
+
+# Likelihood
+The probability of observing your data given a particular model i.e. [[Probability#Bernoulli Distribution|the Bernoulli distribution]]. 
+
+![[Pasted image 20220314000704.png]]
+

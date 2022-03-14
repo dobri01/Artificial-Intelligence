@@ -132,6 +132,98 @@ $$Var(X+Y)= Var(X) + Var(Y)$$
 
 
 ### Continuous Random Variables
+#### Expectation for continuous variables 
+For a continuous random variable $X$ with the [[Probability#Probability Density Function - PDF|PDF]] $f_{X}(x)$, the expectation is defined as
+$$E[X]=\int _{-\infty} ^{\infty}xf_X(x)dx$$
+#### Variance for continuous random variables
+For a continuous random variable $X$ with the [[Probability#Probability Density Function - PDF|PDF]] $f_{X}(x)$ and the expectation $E[X]=\mu _X$, the [[Statistics#Variance and standard deviation|variance]] is defined as
+$$Var(X)=E[(X-\mu_X)^2]=\int _{-\infty} ^{\infty}f_X(x)(x-\mu_{X})^{2}dx $$
+Similar to the case with discrete random variables, the expectation for [[Probability#Continuous Random Variables|continuous random variables]] is a quantity we expect before the implementation of the experiment, while the [[Statistics#Variance and standard deviation|variance]] **measures the concentration behaviour of a random variable around its expectation**.
+
+### Statistical Inference
+Statistical inference refers to the process that collects data to estimate the desired quantity about the [[Definitions#Population|population]].
+
+#### Point estimation
+Point estimation is a process that samples data to calculate a single value as a "best estimate" of an unknown [[Definitions#Population|population]] parameter.
+
+##### Point estimation of expectation
+After collecting data using [[Statistics#Random sampling| sampling with replacement]] we estimate the average height by the average height estimator as
+$$\hat{\Theta}=\bar{X} = \frac{X_{1}+X_{2}+ \dots + X_n}{n}$$
+with: 
+- **random samples**: $X_{1}+X_{2}+ \dots + X_n$ are [[Probability#Independence|independent]] and identically distributed [[Probability#Continuous Random Variables|continuous random variables]], which have the same distributions:
+$$F_{X_{1}}(x)=F_{X_{2}}(x)= \dots = F_{X_{n}}(x)$$
+- **point estimator**: The average height estimator $\hat{\theta}$ is a random variable called a point estimator.
+
+#### Point estimator 
+Suppose we have a random sample $X_{i}$ with the same distribution $i=1, \dots , n$. A point estimator $\hat{\Theta}$ for an unknown parameter $\theta$ is defined as a function of the random sample:
+$$\hat{\Theta} = h(X_{1}, \dots , X_{n})$$
+where h can be any function
+#### Estimate Estimator differences
+- An **estimate** is a number. It is the random realisation of a random variable. This value can be computed from the empirical data.
+- An **estimator** is a [[Probability#Discrete Random variables|random variable]]. It takes a set of [[Probability#Discrete Random variables|random variables]] as inputs and generates another [[Probability#Discrete Random variables|random variable]]. It gives a formula to estimate the parameter. *We can view the estimate as a realisation of the estimator*
+#### Random sampling
+We choose a random sample of size n with replacement from the population.
+- We choose n persons uniformly and independently from the population 
+- Sampling **with** replacement: we allow one person to be chosen twice
+- Sampling **without** replacement: we don't allow one person to be chosen twice
+
+**Why use sampling with replacement**: Random variables $X_i$ are independent which simplifies the analysis.
+
+**When to use sampling with replacement**: when the population is large enough that the probability of choosing one person twice is extremely low.
+
+## Bias 
+Let $\hat{\Theta}=h(X_{1}, \dots , X_{n})$ be a point estimator for for $\theta$. **The bias** of the [[Statistics#Point estimator|point estimator]] $\hat{\Theta}$ is
+$$B(\hat{\Theta}) = E[\hat{\Theta}] - \theta$$
+An estimator $\hat{\Theta}$ is unbiased iff $B(\hat{\Theta}) = 0$
+
+We can compute the deviation of the estimator from $\theta$, which itself is a random variable. The mean squared error is the expected square of this deviation.
+
+## Mean Squared Error (MSE)
+
+The MSE of a [[Statistics#Point estimator|point estimator]] $\hat{\Theta}$, denoted as $MSE(\hat{\Theta})$, is defined as
+$$MSE(\hat{\Theta}) :=E[(\hat{\Theta}-\theta)^{2}] = Var(\hat{\Theta})+B(\hat{\Theta})^{2}$$
+
+## Consistency 
+Let $\hat{\Theta} _{2},~i= 1, \dots , n , \dots$ be a  sequence of points estimators of $\theta$. We say that $\hat{\Theta}$ is a consistent estimator of $\theta$ if
+$$lim_{n\rightarrow \infty}~P(|\hat{\Theta} - \theta| \geq \epsilon) = 0, ~~~ for~all~\epsilon>0$$
+Below is an illustration of the probability of error $P(|\hat{\Theta}_{n} -0| \geq \epsilon)$ with $\epsilon=1$ for an estimator $\hat{\Theta}_{n}$. The shaded area corresponds to the event $|\hat{\Theta}_{n} -0| \geq \epsilon$. As n grows, we see that the probability of error diminishes. This shows that this estimator is consistent.
+
+![[Pasted image 20220314145259.png]]
+
+# Week 5 - Maximum Likelihood Estimation and Logistic Regression 
+
+## Maximum Likelihood Estimation
+Informally, the **Maximum likelihood estimation** searches the best parameters of a probability distribution that makes the data most likely.
+### Likelihood function
+Let $X = X_{1}, X_{2}, \dots X_{n}$ be a random sample from a distribution with a parameter $\theta$. Suppose we have a vector $x =(x_{1},x_{2}, \dots x_{n})$ , then 
+- if $X_{i}$'s are [[Probability#Discrete Random variables|discrete]]:
+$$L(\theta|x)=L(\theta |x_{1},x_{2}, \dots , x_{n}) = P_{X}(x;\theta)$$
+where $P_{x}(x;\theta)$ is the [[Probability#Probability Mass Function - PMF|PMF]] of $X$ parameterised by $\theta$
+
+- if $X_{i}$'s are [[Probability#Continuous Random Variables|continuous]]:
+$$L(\theta | x) = L(\theta| x_{1}, x_{2}, \dots , x_{n}) = f_X(\theta|x)$$
+
+### Probability and Likelihood differences
+
+**Probability**: a number $p \in [0,1]$ between 0 and 1 to describe how likely an event is to occur, or how likely it is that a proposition is true, assuming we know the distribution of the data.
+
+**Likelihood**: a function that measures the goodness of fit of a statistical model to a sample of data for given values of the unknown parameters. It is a function of the unknown parameters, e.g. $\theta$
+
+### Maximum Likelihood Estimator - MLE
+Let $X = (X_{1},X_{2}, \dots , X_{n})$ be a random sample from a distribution with a parameter $\theta$. Suppose we have a vector $x =(x_{1},x_{2}, \dots x_{n})$, a maximum likelihood estimate of $\theta$ denoted as $$\hat{\theta}_{MLE}=argmax ~L(\theta|D)$$
+
+A maximum likelihood estimator of the parameter $\theta$, denoted as $\hat{\Theta}_{MLE}$ is a random variable $\hat{\Theta}_{MLE} = \hat{\Theta}_{MLE}(X)$ whose value when $X_{1}= x_{1}, \dots , X_{n}= x_{n}$ is given by $\hat{\theta}_{MLE}$
+
+#### How to solve this?
+- **exhaustive search**
+	- grid search - usually used for tuning hyper-parameters of a machine learning model. ([check this](https://en.wikipedia.org/wiki/Hyperparameter_optimization#Grid_search|))
+	
+- **optimisation algorithms** - a more general way to solve the problem.
+
+### Cost functions
+ **The cost function** is a function that maps a set of events into a number that represents the "cost" of that event occurring. Also known as the **loss function** / **objective function**
+
+
 
 
 
@@ -139,3 +231,5 @@ $$Var(X+Y)= Var(X) + Var(Y)$$
 Resources
 - [[Note-L7.pdf]]
 - [[Note-L8.pdf]]
+- [[Week 5-Lecture-1-Maximum Likelihood Estimation.pdf]]
+- [[Week 5 Lecture-2-Maximum Likelihood Estimation and Logistic Regression.pdf]]

@@ -6,7 +6,7 @@
       {
         "id": "fc85de8c3fbc1c65",
         "type": "leaf",
-        "dimension": 55.58217537134643,
+        "dimension": 43.02788844621514,
         "state": {
           "type": "markdown",
           "state": {
@@ -21,7 +21,7 @@
       {
         "id": "672735015ee80c0a",
         "type": "leaf",
-        "dimension": 44.41782462865356,
+        "dimension": 56.97211155378486,
         "state": {
           "type": "markdown",
           "state": {
@@ -71,8 +71,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242,
-    "collapsed": true
+    "width": 242
   },
   "right": {
     "id": "eb37a3df310628e9",
@@ -143,14 +142,14 @@
   "active": "fc85de8c3fbc1c65",
   "lastOpenFiles": [
     "Statistics.md",
-    "Probability.md",
     "Definitions.md",
+    "Probability.md",
     "README.md",
+    "Information theory.md",
     "Images/Pasted image 20220313144832.png",
     "Pasted image 20220313144734.png",
     "Images/Pasted image 20220313142501.png",
     "Images/Pasted image 20220303160218.png",
-    "Images/Pasted image 20220311170652.png",
-    "Images/Pasted image 20220311152033.png"
+    "Images/Pasted image 20220311170652.png"
   ]
 }

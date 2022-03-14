@@ -127,7 +127,7 @@ $$P[X=k~|~n] = C_k^n~p^k(1-p)^{n-k}$$
 #### Binomial Distribution
 X is the number of successes in n independent trials with success probability p on each trial: $X=X_1 + X_2~...~X_n$ where $X_1 \sim \text{Bernoulli(p)}$.
 $$P_X(k)=B(k;n,p) = C_k^n p^k(1-p)^{n-k}$$
-<center> where $B(n,p)$ is the binomial distribution with parameter n and p . </center>
+<center> where $B(n,p)$ is the binomial distribution with parameter n and p. </center>
 
 #### Geometric Distribution
 Let X be the number of trials that appear until the first success. 
