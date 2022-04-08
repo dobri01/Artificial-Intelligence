@@ -4,34 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "fc85de8c3fbc1c65",
+        "id": "93f4fac26b40821b",
         "type": "leaf",
-        "dimension": 43.02788844621514,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Statistics.md",
+            "file": "Information theory.md",
             "mode": "source",
             "backlinks": false,
             "source": true
           }
-        },
-        "group": "b35203c7f6d530d0"
+        }
       },
       {
-        "id": "672735015ee80c0a",
+        "id": "86f7a2bfdc1eee7d",
         "type": "leaf",
-        "dimension": 56.97211155378486,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Statistics.md",
+            "file": "Information theory.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
           }
-        },
-        "group": "b35203c7f6d530d0"
+        }
       }
     ],
     "direction": "vertical"
@@ -67,7 +63,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -98,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Statistics.md",
+                "file": "Information theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Statistics.md",
+                "file": "Information theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Statistics.md"
+                "file": "Information theory.md"
               }
             }
           }
@@ -139,17 +136,17 @@
     "width": 369,
     "collapsed": true
   },
-  "active": "fc85de8c3fbc1c65",
+  "active": "93f4fac26b40821b",
   "lastOpenFiles": [
-    "Statistics.md",
-    "Definitions.md",
-    "Probability.md",
-    "README.md",
     "Information theory.md",
+    "Probability.md",
+    "Definitions.md",
+    "Statistics.md",
+    "README.md",
+    "Resources/Note-L2.pdf",
+    "Resources/Week 5-Lecture-1-Maximum Likelihood Estimation.pdf",
+    "Pasted image 20220314204537.png",
     "Images/Pasted image 20220313144832.png",
-    "Pasted image 20220313144734.png",
-    "Images/Pasted image 20220313142501.png",
-    "Images/Pasted image 20220303160218.png",
-    "Images/Pasted image 20220311170652.png"
+    "Pasted image 20220313144734.png"
   ]
 }

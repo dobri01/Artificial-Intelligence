@@ -198,7 +198,7 @@ Informally, the **Maximum likelihood estimation** searches the best parameters o
 Let $X = X_{1}, X_{2}, \dots X_{n}$ be a random sample from a distribution with a parameter $\theta$. Suppose we have a vector $x =(x_{1},x_{2}, \dots x_{n})$ , then 
 - if $X_{i}$'s are [[Probability#Discrete Random variables|discrete]]:
 $$L(\theta|x)=L(\theta |x_{1},x_{2}, \dots , x_{n}) = P_{X}(x;\theta)$$
-where $P_{x}(x;\theta)$ is the [[Probability#Probability Mass Function - PMF|PMF]] of $X$ parameterised by $\theta$
+where $P_{X}(x;\theta)$ is the [[Probability#Probability Mass Function - PMF|PMF]] of $X$ parameterised by $\theta$
 
 - if $X_{i}$'s are [[Probability#Continuous Random Variables|continuous]]:
 $$L(\theta | x) = L(\theta| x_{1}, x_{2}, \dots , x_{n}) = f_X(\theta|x)$$
@@ -223,9 +223,89 @@ A maximum likelihood estimator of the parameter $\theta$, denoted as $\hat{\Thet
 ### Cost functions
  **The cost function** is a function that maps a set of events into a number that represents the "cost" of that event occurring. Also known as the **loss function** / **objective function**
 
+**The cost function for likelihood** is a general one-to-one mapping with likelihood - the negative logarithm of the likelihood function:
+$$J(\theta,D)= -log(L(\theta|D))$$
+
+### Optimisation
+Optimisation means finding the best solution from among the set of all feasible solutions.
+
+**Optimisation procedure**
+- Constructing a model
+- Determining the Problem Type
+- Selecting an optimisation algorithm
+
+**Some Machine Learning examples**:
+- *Supervised learning*: Given some training data, we want to train a machine learning model to explain the data. The training process is essentially a process of finding a optimal set of parameters of this model and the optimality is defined by an objective function.
+- *Unsupervised learning*: Given some unlabelled samples, we aim to divide them into multiple clusters or groups, of which the samples in the same group are as similar as possible but samples in different groups are as different as possible.
+
+For a function $g(w)$ of $N$ dimensional independent variables $w \in R^{N}$, the optimisation problem is
+$$argmin ~g(w)$$
+a $w$ is the local minimum if it satisfies the **first-order necessary condition for optimality**
+$$\huge \triangle _{w}g(w^{*}) = 0_{N\times1}$$
+The point which satisfies this condition is also called **stationary point**.
+
+![[Pasted image 20220314204537.png]]
+
+### Gradient descent
+
+It's a first order iterative optimisation algorithm for finding a local minimum of a differentiable cost function.
+To employ the negative gradient at each step to decrease the cost function.
+
+**The negative function consists of**
+- *a direction* - determined by the gradient at the point
+- *a magnitude* - sometimes called step size
+
+Intuition: Start at any value of parameter $\theta$, then change $\theta$ in the direction that decreases the cost function and keep repeating until there is only the tiniest decrease in cost with each step.
+The negative gradient of a cost function $J(\theta)$ as
+$$-\triangle_{\theta}J = - \frac{dJ(\theta)}{d\theta}$$
+then we need to choose a magnitude or step size parameter $\eta$ (also called **the learning rate**). Then the new **negative gradient formula** is
+$$\theta(t+1) = \theta(t) - \eta \triangle_{\theta}J(\theta(t)) = \theta(t) - \eta \frac{dJ(\theta (t))}{d\theta}$$
+
+## Logistic Regression and Maximum Likelihood
+
+### Classification problems
+#### Classification 
+- def 1: determining the most likely class that an input pattern belongs to.
+- def 2: modelling the posterior probabilities of class membership (dependent variable) conditioned on the input (independent) variables
+#### Artificial neural networks
+One output unit for each class, and for each input pattern we have
+- 1 for the output unit corresponding to that class
+- 0 for all the other output units
+#### Binary classification
+The simplest case: one output unit
+#### Logistic regression
+It is a regression model where the prediction (dependent variable) is categorical, e.g. binary
+- **Goal**: to predict the probability that a given example belongs to the "1" class versus the probability that it belongs to the "0" class
+- **Algorithm**: use the logarithm of the odds (called **logit** or **log-odds**) to model the binary prediction (dependant variable) as a linear combination of independent variables, then use the logistic function: converts log-odds to probability.
+
+#### Odd ratio vs Probability
+**Probability**: a number $p \in [0,1]$ between 0 and 1 to describe how likely an event is to occur , or how likely it is that a proposition is true.
+**Odds**:  a number to describe to the probability of **a binary outcome**. The odds are the ratio of probability that an outcome presents. 
+**Logit (log-odds)**: the logarithm of the odds:
+$$logit(p)= log\left(\frac{p}{1-p}\right)= log(p) - log(1-p) = -log(\frac{1}{p} - 1)$$
 
 
+#### Linear regression 
+Linear regression (function approximation): approximating an underlying linear function from a set of noisy data.
 
+**Problem definition** we have N observations i.e. $\{(x_{i}, y_{i})\}$ ,  $i = 1, \dots , N$ where
+- $x_{i}$ - independent variables, also called regressor which  is a K dimensional vector $x_{i}\in R^{K}$, and $x_{i}=[x_{i_{1}} x_{i_{2}} x_{i_{3} \dots x_{i_{k}}}]^{T}$
+- $y_{i}$: dependent variable, which is a scalar $y_{i} \in R^{1}$
+
+**Aim**: To approximate a linear regression model to predict the dependent variable
+$$\hat{y_{i}} = \theta_{0} + \sum\limits_{k=1}^{K}\theta_kx_{ik} + \epsilon_{i}~~~i=1,2, \dots , N$$
+where $\theta_{0}$ is the interception and $\theta_{k}$ is the disturbance term or error variable.
+
+#### Maximum Likelihood Estimation of Logistic Regression
+Solving logistic regression: we need to estimate the $K+1$ unknown parameters $\theta$ equation 1. 
+
+To find the maximum likelihood estimation we need to find the set of parameters for which the probability of the data is the greatest.
+
+# Extra
+
+## Poisson Distribution
+Poisson Distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time or space if these events occur with a known constant mean rate and independently of the time since the last event. 
+$$f(x)=\frac{\lambda ^{x}}{x!}e^{- \lambda}$$
 
 ---
 Resources
