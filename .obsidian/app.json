@@ -29,5 +29,6 @@
   "smartIndentList": true,
   "autoPairMarkdown": true,
   "livePreview": false,
-  "useMarkdownLinks": false
+  "useMarkdownLinks": false,
+  "promptDelete": false
 }

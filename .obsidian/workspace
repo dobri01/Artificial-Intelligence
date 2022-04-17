@@ -4,12 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "93f4fac26b40821b",
+        "id": "86f7a2bfdc1eee7d",
         "type": "leaf",
+        "dimension": 37.093563370935634,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Information theory.md",
+            "file": "Search Trees.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -17,12 +18,13 @@
         }
       },
       {
-        "id": "86f7a2bfdc1eee7d",
+        "id": "28350dcb5a5763a0",
         "type": "leaf",
+        "dimension": 62.906436629064366,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Information theory.md",
+            "file": "Search Trees.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
@@ -63,8 +65,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information theory.md",
+                "file": "Search Trees.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information theory.md",
+                "file": "Search Trees.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information theory.md"
+                "file": "Search Trees.md"
               }
             }
           }
@@ -136,17 +137,17 @@
     "width": 369,
     "collapsed": true
   },
-  "active": "93f4fac26b40821b",
+  "active": "86f7a2bfdc1eee7d",
   "lastOpenFiles": [
-    "Information theory.md",
-    "Probability.md",
-    "Definitions.md",
+    "Search Trees.md",
     "Statistics.md",
+    "Probability.md",
+    "Untitled.md",
+    "Information theory.md",
+    "Images/Pasted image 20220314145259.png",
+    "Images/Pasted image 20220408181502.png",
+    "Definitions.md",
     "README.md",
-    "Resources/Note-L2.pdf",
-    "Resources/Week 5-Lecture-1-Maximum Likelihood Estimation.pdf",
-    "Pasted image 20220314204537.png",
-    "Images/Pasted image 20220313144832.png",
-    "Pasted image 20220313144734.png"
+    "Resources/Note-L2.pdf"
   ]
 }

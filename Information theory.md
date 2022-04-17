@@ -159,3 +159,115 @@ $$I_{G}(p)=1- \sum\limits_{i=1}^{J}p_{i}^{2}$$ where $p_{i}$ is the fraction of 
 ## Information gain
 **The information gain** is the information we can gain after spiting the samples based on a independent variable (internal node). Formally, **information gain** is defined as the change in information entropy $H$ from a prior state to a state that takes some information as given:
 $$IG(Y,X)=H(Y)=H(Y|X)$$ where $Y$ is a random variable that represents the dependent variable and $X$ is one of the independent variables, and $H(Y|X)$ is the conditional entropy of $Y$ given $X$.
+
+## Decision trees
+
+For general discrete random variables with more them two values (categorical variables) and continuous random variables, we need to search the best value called **cut-off**, **cut point** or **threshold** that maximise the information gain.
+
+**Drawbacks**
+- *Unstable*: a small change in the data can lead to a large change in the structure of the optimal decision tree.
+- *Relatively inaccurate*: Many other predictors such as **Support Vector Machine** and **Neural Networks** perform better then decision trees with similar data.
+
+**Solutions**: Decision tree ensembles:
+- Random forest
+- Gradient boosting such as **XGBoost**
+
+Decision tree learning algorithms recursively use mutual information to select the independent variable that share the most information with the dependent variable, then split (make a decision) the samples based on the value of this independent variable.
+
+## Mutual information for feature selection
+We can use the mutual information to choose a optimal set of independent variables (features) that allow us to classify samples. 
+
+Formally, given an initial set $F$ with n independent variables, $X=(X_{1},X_{2} \dots , X_{n})$, find the subset with $S \subset F$ features that maximises the Mutual information $I(Y;S)$ between the dependent variable $Y$ (label) and the subset of selected features $S$.
+
+![[Pasted image 20220410172732.png]]
+Mode information:
+- [Wikipedia](https://en.wikipedia.org/wiki/Feature_selection)
+- [Scikit](https://scikit-learn.org/stable/modules/feature_selection.html)
+
+## Maximum Entropy Principle
+
+- [Jaynes's Maximum Entropy Principle](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-74759-0_312)
+- [Shan's blog](https://shanhelab.com/2020/03/02/principle-of-maximum-entropy/)
+- [Duality of Maximum likelihood and Maximum Entropy](https://www.cs.huji.ac.il/~shashua/papers/class3-ML-MaxEnt.pdf)
+
+Should add more notes later on it
+
+# Bayesian Networks
+
+**Probabilistic Graphical Models** are graphs which nodes represent random variables, and the edges represent **conditional independence assumptions**.
+- Undirected graphical models: Markov Random Fields - **MRF**![[Pasted image 20220413121102.png]] 
+- Directed graphical models: **Bayesian Networks**![[Pasted image 20220413121141.png]]
+
+A **Bayesian Network** is a kind of probabilistic graphic model that uses the direction of edges to represent the cause-effect relationship and Bayes' theorem for probabilistic future.
+
+Advantages:
+- **Graphical representation**
+- **More powerful** - can capture complex relationships between random variables
+- **Combine data and prior knowledge** - prior knowledge can be incorporated and updated with statistically significant information from data - better approximation of true knowledge.
+- **Generative approach** - generate new data similar to existing data
+
+Disadvantages:
+- Require prior knowledge of many probabilities
+- Sometimes computationally intractable.
+
+![[Pasted image 20220413121954.png]]
+
+## Full joint distribution - Bayesian Network
+We define it as the product of the local conditional distributions:
+$$P(X_{1},X_{2}, \dots , X_{n}) = \prod_{i=1}^{n}P(X_{i}|Parents(X_{i}))$$
+
+Essence of a Bayesian network: a compact representation of a joint probability distribution in terms of conditional distribution
+
+## Probabilistic relationship
+
+![[Pasted image 20220413123231.png]]
+
+### Direct Cause
+
+An edge represents a cause-effect relationship, called direct cause, or conditional dependence between the parent node (cause) and the child node (effect).
+$$P(W|R)$$
+
+![[Pasted image 20220413124140.png]]
+
+In general the random variables (nodes) fall into two groups:
+- **Observed variables**: the ones we have knowledge about
+- **Unobserved variables**: ones we do not know about and therefore have to infer the probability
+
+## Conditional independence 
+
+Two random variables $A$ and $B$ are conditionally independent if they are independent given a third variable $C$, written as:
+$$(A \perp\!\!\!\perp B) |C \Leftrightarrow P(A,B|C)=P(A|C)P(B|C)$$
+
+Graphically it can be represented as:
+
+![[Pasted image 20220413132113.png]]
+
+The joint distribution of three random variables is:
+$$P(A,B,C)=P(C)P(A|C)P(B|A,C)$$
+
+![[Pasted image 20220413132246.png]]
+
+## Markov Condition of Bayesian networks
+
+Each random variable  $X$ is conditionally independent of its non-descendants, given it's parents.
+
+![[Pasted image 20220413133652.png]]
+
+That means that structures such as this are not allowed:
+
+![[Pasted image 20220413133811.png]]
+
+A node is independent of its parents, where the ancestor/parent relationship is with respect to some fixed topological ordering of the nodes.
+
+
+The effect can only be determined by it's parents, not by the ancestors.
+
+
+Markov's blanket (might saturate the internal status of a complex system)
+
+Data science and machine learning should be used as a hypothesis (testing) not for proving. <- Tools to test your hypothesis (testing tools) 
+
+
+- Separate test and training data and pre-process them separately 
+- Deal with the missing values (drop or get a median etc)
+- Categorical values how to represent them 
