@@ -6,11 +6,10 @@
       {
         "id": "86f7a2bfdc1eee7d",
         "type": "leaf",
-        "dimension": 37.093563370935634,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Search Trees.md",
+            "file": "Search Trees CSP Optimisation.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -18,13 +17,12 @@
         }
       },
       {
-        "id": "28350dcb5a5763a0",
+        "id": "02e3af958b073d68",
         "type": "leaf",
-        "dimension": 62.906436629064366,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Search Trees.md",
+            "file": "Search Trees CSP Optimisation.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
@@ -69,7 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242
+    "width": 249.5
   },
   "right": {
     "id": "eb37a3df310628e9",
@@ -96,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Search Trees.md",
+                "file": "Search Trees CSP Optimisation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Search Trees.md",
+                "file": "Search Trees CSP Optimisation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Search Trees.md"
+                "file": "Search Trees CSP Optimisation.md"
               }
             }
           }
@@ -139,11 +137,11 @@
   },
   "active": "86f7a2bfdc1eee7d",
   "lastOpenFiles": [
-    "Search Trees.md",
+    "Search Trees CSP Optimisation.md",
+    "Genetic Algorithms.md",
+    "Information theory.md",
     "Statistics.md",
     "Probability.md",
-    "Untitled.md",
-    "Information theory.md",
     "Images/Pasted image 20220314145259.png",
     "Images/Pasted image 20220408181502.png",
     "Definitions.md",
