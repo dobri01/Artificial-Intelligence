@@ -231,10 +231,21 @@ Question 2
 Here is an optimised way of solving [[Search Trees CSP Optimisation#CSP|these two problems]].
 
 We may be able to formulate CSP differently:
--   encode some constraints into domains directly
-- consider some constraints when formulating the problem
-
+-   Encode some constraints into domains directly
+- Consider some constraints when formulating the problem
+## Cryptarithmetic
 ![[Pasted image 20220420134246.png]]
 
 - We reduced the search space of the problem as $X1$ $X2$ $X3$ are used for addition and don't need the full domain.
 - We can also put $T$ and $F$ different to 0 for constraints.
+## N Queens
+![[Pasted image 20220420192608.png]]
+
+- If we encode the queens like this then we can simplify the constraints and have less variables (reduced dimension)
+- We don't need the last condition from last time (we included it into the notation)
+
+## Minesweeper
+![[Pasted image 20220420194540.png]]
+
+- Based on forward checking and ordering we can optimise in what order the variables are visited 
+- This can be optimised way more

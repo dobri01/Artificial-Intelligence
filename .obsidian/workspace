@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "86f7a2bfdc1eee7d",
+        "id": "6e0fcae6bf407d29",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Search Trees CSP Optimisation.md",
+            "file": "Genetic Algorithms.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -17,12 +17,12 @@
         }
       },
       {
-        "id": "02e3af958b073d68",
+        "id": "e74bdc78e5b347c6",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Search Trees CSP Optimisation.md",
+            "file": "Genetic Algorithms.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
@@ -67,7 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.5
+    "width": 375
   },
   "right": {
     "id": "eb37a3df310628e9",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Search Trees CSP Optimisation.md",
+                "file": "Genetic Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Search Trees CSP Optimisation.md",
+                "file": "Genetic Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Search Trees CSP Optimisation.md"
+                "file": "Genetic Algorithms.md"
               }
             }
           }
@@ -135,17 +135,17 @@
     "width": 369,
     "collapsed": true
   },
-  "active": "86f7a2bfdc1eee7d",
+  "active": "6e0fcae6bf407d29",
   "lastOpenFiles": [
-    "Search Trees CSP Optimisation.md",
     "Genetic Algorithms.md",
     "Information theory.md",
-    "Statistics.md",
+    "Definitions.md",
     "Probability.md",
+    "README.md",
+    "Search Trees CSP Optimisation.md",
+    "Statistics.md",
     "Images/Pasted image 20220314145259.png",
     "Images/Pasted image 20220408181502.png",
-    "Definitions.md",
-    "README.md",
     "Resources/Note-L2.pdf"
   ]
 }
