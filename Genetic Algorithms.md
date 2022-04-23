@@ -140,3 +140,22 @@ Here we have to represent this chromosome in a different domain. The genotype re
 
 ![[Pasted image 20220422225442.png]]
 ![[Pasted image 20220422225935.png]]
+
+## Expectimax Search 
+If we know the opponent is optimal we use [[Genetic Algorithms#Adversarial search - Minimax|minmax search]] but it if is not then we use **expectimax search.**
+
+Reasons to use this:
+- **unpredictable opponent**
+- **explicit randomness** - rolling dice, poker
+- **actions can fail** - random
+
+The opponent node is changed to **the chance node** where we calculate the average utility (based on the chance).
+
+![[Pasted image 20220423191056.png]]
+
+![[Pasted image 20220423191127.png]]
+
+## Utilities 
+Utilities are functions from outcomes to real numbers that describe an agent's preference.
+
+Utilities summaries the agent's goal. Any set of preferences between outcomes can be summarized as a utility function (provided the preferences meet certain conditions).
