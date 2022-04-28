@@ -3,5 +3,6 @@
   "url-into-selection",
   "obsidian-autocomplete-plugin",
   "cm-editor-syntax-highlight-obsidian",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-excalidraw-plugin"
 ]

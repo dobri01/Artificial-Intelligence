@@ -4,12 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "6e0fcae6bf407d29",
+        "id": "dbb1ec70ee99c0d1",
         "type": "leaf",
+        "dimension": 30.876378409750437,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Genetic Algorithms.md",
+            "file": "Deep Neural Networks and Imaging.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -17,17 +18,31 @@
         }
       },
       {
-        "id": "e74bdc78e5b347c6",
+        "id": "72cf7200a5cc460e",
         "type": "leaf",
+        "dimension": 50.55136390017412,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Genetic Algorithms.md",
+            "file": "Deep Neural Networks and Imaging.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
           }
-        }
+        },
+        "group": "34e2e7d472ae6974"
+      },
+      {
+        "id": "406a216052f1a3f6",
+        "type": "leaf",
+        "dimension": 18.57225769007545,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Deep Neural Networks and Imaging.md"
+          }
+        },
+        "group": "34e2e7d472ae6974"
       }
     ],
     "direction": "vertical"
@@ -95,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Genetic Algorithms.md",
+                "file": "Deep Neural Networks and Imaging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Genetic Algorithms.md",
+                "file": "Deep Neural Networks and Imaging.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Genetic Algorithms.md"
+                "file": "Deep Neural Networks and Imaging.md"
               }
             }
           }
@@ -136,17 +151,17 @@
     "width": 369,
     "collapsed": true
   },
-  "active": "6e0fcae6bf407d29",
+  "active": "dbb1ec70ee99c0d1",
   "lastOpenFiles": [
-    "Genetic Algorithms.md",
-    "Information theory.md",
+    "Deep Neural Networks and Imaging.md",
     "Definitions.md",
-    "Probability.md",
-    "README.md",
-    "Search Trees CSP Optimisation.md",
+    "Excalidraw/Deep Neural Networks and Imaging 2022-04-28 17.02.04.excalidraw.md",
     "Statistics.md",
-    "Images/Pasted image 20220314145259.png",
-    "Images/Pasted image 20220408181502.png",
-    "Resources/Note-L2.pdf"
+    "Excalidraw/Drawing 2022-04-28 16.57.01.excalidraw.md",
+    "Excalidraw/Drawing 2022-04-28 16.49.59.excalidraw.md",
+    "Excalidraw/Drawing 2022-04-28 16.49.57.excalidraw.md",
+    "Excalidraw/Drawing 2022-04-28 16.49.06.excalidraw.md",
+    "README.md",
+    "Images/Pasted image 20220428162923.png"
   ]
 }

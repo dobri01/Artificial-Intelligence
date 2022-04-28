@@ -52,3 +52,9 @@ The probability of observing your data given a particular model i.e. [[Probabili
 
 ![[Pasted image 20220314000704.png]]
 
+# Epoch
+The epoch is what is guiding the learning procedure. 
+
+It is guiding how many times we are making updates to the weights while the algorithm is learning. 
+
+An epoch of 1 means we updated the parameter value as many times as the number of samples in the training data. Typically we need many epoch for the algorithm to work.
