@@ -4,34 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "dbb1ec70ee99c0d1",
+        "id": "c89f06e011d58205",
         "type": "leaf",
-        "dimension": 37.97909407665505,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Deep Neural Networks and Imaging.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
-          }
-        },
-        "group": "24f35198bdc6e74b"
-      },
-      {
-        "id": "72cf7200a5cc460e",
-        "type": "leaf",
-        "dimension": 62.02090592334495,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Deep Neural Networks and Imaging.md",
+            "file": "Statistics.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
           }
-        },
-        "group": "24f35198bdc6e74b"
+        }
       }
     ],
     "direction": "vertical"
@@ -67,13 +50,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 375,
-    "collapsed": true
+    "width": 375
   },
   "right": {
     "id": "eb37a3df310628e9",
@@ -100,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Deep Neural Networks and Imaging.md",
+                "file": "Statistics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Deep Neural Networks and Imaging.md",
+                "file": "Statistics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Deep Neural Networks and Imaging.md"
+                "file": "Statistics.md"
               }
             }
           }
@@ -141,17 +122,17 @@
     "width": 369,
     "collapsed": true
   },
-  "active": "72cf7200a5cc460e",
+  "active": "c89f06e011d58205",
   "lastOpenFiles": [
+    "Statistics.md",
+    "Images/Pasted image 20220516155400.png",
+    "Images/Pasted image 20220516155417.png",
     "Deep Neural Networks and Imaging.md",
     "Genetic Algorithms.md",
-    "Statistics.md",
     "Probability.md",
     "README.md",
     "Images/Pasted image 20220510170614.png",
     "Definitions.md",
-    "Excalidraw/Deep Neural Networks and Imaging 2022-04-28 17.02.04.excalidraw.md",
-    "Excalidraw/Drawing 2022-04-28 16.57.01.excalidraw.md",
-    "Excalidraw/Drawing 2022-04-28 16.49.59.excalidraw.md"
+    "Excalidraw/Deep Neural Networks and Imaging 2022-04-28 17.02.04.excalidraw.md"
   ]
 }
