@@ -6,7 +6,7 @@
       {
         "id": "dbb1ec70ee99c0d1",
         "type": "leaf",
-        "dimension": 30.876378409750437,
+        "dimension": 37.97909407665505,
         "state": {
           "type": "markdown",
           "state": {
@@ -15,12 +15,13 @@
             "backlinks": false,
             "source": true
           }
-        }
+        },
+        "group": "24f35198bdc6e74b"
       },
       {
         "id": "72cf7200a5cc460e",
         "type": "leaf",
-        "dimension": 50.55136390017412,
+        "dimension": 62.02090592334495,
         "state": {
           "type": "markdown",
           "state": {
@@ -30,19 +31,7 @@
             "source": true
           }
         },
-        "group": "34e2e7d472ae6974"
-      },
-      {
-        "id": "406a216052f1a3f6",
-        "type": "leaf",
-        "dimension": 18.57225769007545,
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "Deep Neural Networks and Imaging.md"
-          }
-        },
-        "group": "34e2e7d472ae6974"
+        "group": "24f35198bdc6e74b"
       }
     ],
     "direction": "vertical"
@@ -69,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "relu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,11 +67,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 375
+    "width": 375,
+    "collapsed": true
   },
   "right": {
     "id": "eb37a3df310628e9",
@@ -150,17 +141,17 @@
     "width": 369,
     "collapsed": true
   },
-  "active": "dbb1ec70ee99c0d1",
+  "active": "72cf7200a5cc460e",
   "lastOpenFiles": [
     "Deep Neural Networks and Imaging.md",
+    "Genetic Algorithms.md",
+    "Statistics.md",
+    "Probability.md",
+    "README.md",
+    "Images/Pasted image 20220510170614.png",
     "Definitions.md",
     "Excalidraw/Deep Neural Networks and Imaging 2022-04-28 17.02.04.excalidraw.md",
-    "Statistics.md",
     "Excalidraw/Drawing 2022-04-28 16.57.01.excalidraw.md",
-    "Excalidraw/Drawing 2022-04-28 16.49.59.excalidraw.md",
-    "Excalidraw/Drawing 2022-04-28 16.49.57.excalidraw.md",
-    "Excalidraw/Drawing 2022-04-28 16.49.06.excalidraw.md",
-    "README.md",
-    "Images/Pasted image 20220428162923.png"
+    "Excalidraw/Drawing 2022-04-28 16.49.59.excalidraw.md"
   ]
 }
