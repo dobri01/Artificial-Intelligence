@@ -1,4 +1,5 @@
-# Week 4 - Joint Distribution and statistical inference
+#Week4
+# Joint Distribution and statistical inference
 ## Joint Distributions
 Conceptually, joint distributions are multi-dimensional [[Probability#Probability Density Function - PDF|PDFs]] (or [[Probability#Probability Mass Function - PMF|PMFs]] or [[Probability#Cumulative Distribution Function - CDF|CDFs]])
 $$f_{X_1 ... X_N}(x_{1}...x_{N})$$
@@ -10,6 +11,7 @@ According to the definition, we know that joint [[Probability#Probability Mass F
 ![[Pasted image 20220312191941.png]]
 <center>A joint PMF for a pair of discrete random variables consists of an array of impulses. To measure the size of the event A, we sum all the impulses inside A </center>
 
+
 ### Joint PDF
 Let $X$ and $Y$ be two [[Probability#Continuous Random Variables|continuous random variables]]. **The joint PDF** of $X$ and $Y$ is a function $f_{X,Y}(x,y)$ that can be integrated to yield a probability
 $$P(A)= \int_{A} f_{X,Y}(x,y)~dx~dy$$
@@ -18,7 +20,7 @@ The joint PDF can be interpreted as the probability per unit, and can take value
 ![[Pasted image 20220312193758.png]]
 
 ### Marginal PMF and Marginal PDF
-**The marginal PMF **is defined as 
+**The marginal PMF** is defined as 
 $$P_{x}(x)= \sum\limits_{y \in Y(\Omega)} P_{X,Y}(x,y) ~~~ and ~~~ P_{Y}(y) = \sum\limits_{x \in X(\Omega)} P_{X,Y}(x,y)$$  
 
 **The marginal PDF** is defined as
@@ -29,14 +31,22 @@ $$f_{X}(x) = \int _{Y(\Omega)}f_{X,Y}(x,y) dy~~~ and ~~~ f_{Y}(y) = \int _{X(\Om
 Let $X$ and $Y$ are **discrete**, then
 $$\huge F_{X,Y}(x,y) = \sum\limits_{y'\leq y}\sum\limits_{x'\leq x} P_{X,Y}(x'y')$$
 
-Lex $X$ and $Y$ are **continuous**, then
+Let $X$ and $Y$ are **continuous**, then
 $$F_{X,Y}(x,y)= \int_{-\infty}^{y}\int_{-\infty}^{x}f_{X,Y}(x',y') dx'dy'$$
 
 The dots represent the pairs $(x_i ,y_{i})\in X(\Omega) \times Y(\Omega)$. $F_{X,Y}(x,y)$ is the probability that $(X,Y)$ belongs to the shaded region.
 ![[Pasted image 20220313142501.png]]
+**The marginal CDF**
+$$F_{X}(x)=F_{XY}(x, \infty ) = lim_{y->\infty}F_{XY}(x,y) ~~~\text{ for any x}$$ 
+$$F_{Y}(y)=F_{XY}(\infty , y)= lim_{x-> \infty}F_{XY}(x,y) ~~~ \text { for any y}$$
+
+Also note that:
+- $F_{XY}(\infty, \infty)=1$
+- $F_{XY}(- \infty , y) = 0 ~~~ \text{ for any y}$ 
+- $F_{XY}(x, -\infty)=0 ~~~ \text{ for any x}$
 ## Independency
 We say that two random variables $X$ and $Y$ are independent if
-$$F_{X,y}(x,y) = F_{x}(x)F_{y}(y)$$
+$$F_{X,Y}(x,y) = F_{X}(x)F_{Y}(y)$$
 Intuitively we say two random variables are **independent** iff the joint [[Probability#Cumulative Distribution Function - CDF|CDF]] can be factorised into [[Probability#Cumulative Distribution Function - CDF|CDFs]] of [[Probability#Discrete Random variables|single random variables]]. This factorisation shows no correlation between these two [[Probability#Discrete Random variables|single random variables]].
 
 ### Independence for two variables
@@ -50,12 +60,12 @@ $$f_{X_{1},\dots, X_{N}}(x_{1}, \dots ,x_{N)}= \prod_{n=1}^{N}f_{X_{n}}(x_n)$$
 
 ## Conditional PMF and Conditional PDF
 ### Conditional PMF
-We say that for a [[Probability#Discrete Random variables| discrete random variable]] $X$ and event $A$, **the conditional PMF** of $X$ given $A$ is defined as
+We say that for a [[Probability#Discrete Random variables| discrete random variable]] $X$ and event $A$, **the conditional PMF** of $X$ given $A$ is defined as (under an event)
 $$
-\begin{align}
-P_{X|A}(x_{i}) = P(X= x_{i}|A) \\
-= \frac{P(X = x_{i}~and~A)}{P(A)}, && for ~any ~x_{i}\in X(\Omega)
-\end{align}
+
+P_{X|A}(x_{i}) = P(X= x_{i}|A)
+= \frac{P(X = x_{i}~and~A)}{P(A)} ~~ \text { for any } x_{i}\in X(\Omega)
+
 $$
 
 Let $X$ and $Y$ be two [[Probability#Discrete Random variables| discrete random variables]]. **The conditional PMF** of $X$ given $Y$ is
@@ -90,7 +100,12 @@ The expectation gives the value we expect for a [[Probability#Discrete Random va
 
 
 #### Linearity of expectation
+Let $X_{1}, X_{2}, \dots , X_{k}$ be random variables. Let $a_{1}, \dots , a_{k}$ be constants. Then
+$$E[\sum\limits_{i=1}^{k}a_{i}X_{i}]= \sum\limits_{i=1}^{k}a_{i}E[X_{i}]$$
+Example:
 $$E[X] = E[X_{1}+X_{2}+X_{3}] = E[X_{1}]+ E[X_{2}]+ E[X_{3}]$$
+
+![[Pasted image 20220521153528.png|300]]
 
 #### Sample Mean and Expectation
 Suppose we repeatedly do the same random experiment. This leads to n random variables $X_{i}, ~i\in [n]$ with the same [[Probability#Probability Mass Function - PMF|PMF]].
@@ -107,7 +122,9 @@ $$\bar{X}_{n} = \frac{1}{n} \sum\limits_{i=1}^{n}X_{i}$$
 - Itself is a [[Probability#Discrete Random variables|random variable]]. Note is is an average of $X_{i}$, each of which is a [[Probability#Discrete Random variables|random variable]].
 - It had uncertainty. The uncertainty reduces as more samples are used. The reason is that the randomisation is likely to offset each other with more experiments.
 - We can use sample mean to estimate the expectation: the expectation cannot be computed from the data, while the sample mean can.
-### Variance and standard deviation
+### Variance and standard deviation - size of deviations from the mean
+![[Pasted image 20220521154315.png]]
+![[Pasted image 20220521154403.png]]
 Variance, $Var(X)$ is the expected value of the squared derivations
 $$Var(X) = E[\triangle^{2}] =E[(X-\mu)^{2}] = E[(X-E[X])^{2}]$$
 
@@ -125,6 +142,8 @@ Let $X$ be a random variable. Then we have the following property
 $$Var(X) = E[X^{2}]- (E[X])^{2}$$
 2. Scale. For any constant c
 $$Var(cX) = c^{2}Var(X)$$
+
+![[Pasted image 20220521154448.png|300]]
 3. Shift. For any constant c
 $$Var(X+c) = Var(X)$$
 4. If $X$ and $Y$ are [[Probability#Independence|independent]] then
@@ -190,7 +209,8 @@ Below is an illustration of the probability of error $P(|\hat{\Theta}_{n} -0| \g
 
 ![[Pasted image 20220314145259.png]]
 
-# Week 5 - Maximum Likelihood Estimation and Logistic Regression 
+#Week5
+# Maximum Likelihood Estimation and Logistic Regression 
 
 ## Maximum Likelihood Estimation
 Informally, the **Maximum likelihood estimation** searches the best parameters of a probability distribution that makes the data most likely.
@@ -203,6 +223,7 @@ where $P_{X}(x;\theta)$ is the [[Probability#Probability Mass Function - PMF|PMF
 - if $X_{i}$'s are [[Probability#Continuous Random Variables|continuous]]:
 $$L(\theta | x) = L(\theta| x_{1}, x_{2}, \dots , x_{n}) = f_X(\theta|x)$$
 
+![[Pasted image 20220521165032.png|400]]
 ### Probability and Likelihood differences
 
 **Probability**: a number $p \in [0,1]$ between 0 and 1 to describe how likely an event is to occur, or how likely it is that a proposition is true, assuming we know the distribution of the data.
@@ -220,12 +241,24 @@ A maximum likelihood estimator of the parameter $\theta$, denoted as $\hat{\Thet
 	
 - **optimisation algorithms** - a more general way to solve the problem.
 
+#### **MLE** for independent and identically distributed random variables
+$$f_{X}(x| \theta) = \prod_{k=1}^{n}f_{k}(x_{k}| \theta )$$
+
+
+
 ### Cost functions
- **The cost function** is a function that maps a set of events into a number that represents the "cost" of that event occurring. Also known as the **loss function** / **objective function**
+ **The cost function** is a function that maps a set of events into a number that represents the "cost" of that event occurring. Also known as the **loss function** / **objective function**.
 
 **The cost function for likelihood** is a general one-to-one mapping with likelihood - the negative logarithm of the likelihood function:
 $$J(\theta,D)= -log(L(\theta|D))$$
 
+
+Why use the negative logarithm of the likelihood function as the cost function?
+- **Convention**: By convention, many optimisation problems are minimisation problems.
+- **Convenience**: Taking the logarithm changes multiplication to addition which is easier to differentiate.
+- **Numerically stable**: Product of $\theta$, which is a probability will converge quickly to zero, which cause problems for computers who are limited bu machine precision.
+
+![[Pasted image 20220521170536.png|300]]
 ### Optimisation
 Optimisation means finding the best solution from among the set of all feasible solutions.
 
@@ -244,6 +277,11 @@ a $w$ is the local minimum if it satisfies the **first-order necessary condition
 $$\huge \triangle _{w}g(w^{*}) = 0_{N\times1}$$
 The point which satisfies this condition is also called **stationary point**.
 
+**Saddle point**
+![[Pasted image 20220521170739.png]]
+
+The equation of first-order necessary condition can be written as a system of N first order equations.
+
 ![[Pasted image 20220314204537.png]]
 
 ### Gradient descent
@@ -261,6 +299,8 @@ $$-\triangle_{\theta}J = - \frac{dJ(\theta)}{d\theta}$$
 then we need to choose a magnitude or step size parameter $\eta$ (also called **the learning rate**). Then the new **negative gradient formula** is
 $$\theta(t+1) = \theta(t) - \eta \triangle_{\theta}J(\theta(t)) = \theta(t) - \eta \frac{dJ(\theta (t))}{d\theta}$$
 
+![[Pasted image 20220521170914.png]]
+
 ## Logistic Regression and Maximum Likelihood
 
 ### Classification problems
@@ -272,7 +312,12 @@ One output unit for each class, and for each input pattern we have
 - 1 for the output unit corresponding to that class
 - 0 for all the other output units
 #### Binary classification
-The simplest case: one output unit
+The simplest case: one output unit.
+
+![[Pasted image 20220521171621.png]]
+
+![[Pasted image 20220521171642.png]]
+
 #### Logistic regression
 It is a regression model where the prediction (dependent variable) is categorical, e.g. binary
 - **Goal**: to predict the probability that a given example belongs to the "1" class versus the probability that it belongs to the "0" class
@@ -284,6 +329,12 @@ It is a regression model where the prediction (dependent variable) is categorica
 **Logit (log-odds)**: the logarithm of the odds:
 $$logit(p)= log\left(\frac{p}{1-p}\right)= log(p) - log(1-p) = -log(\frac{1}{p} - 1)$$
 
+![[Pasted image 20220521171800.png]]
+
+Use the logarithm of the odds (called logit or log-odds) to models the binary prediction as a linear combination of independent variables.
+
+Given n independent variables $x_{1}$ to $x_{n}$ and one dependent variable Y which is a random variable that follows Bernoulli's distribution (binary) which is denoted as $p=P(Y=1)$. The logistic model can be formally defined as:
+$$logit = log\left(\frac{p}{1-p}\right)= \theta_{0}+\theta_{1}x_{1} + \dots + \theta x_{n}$$
 
 #### Linear regression 
 Linear regression (function approximation): approximating an underlying linear function from a set of noisy data.
@@ -296,16 +347,41 @@ Linear regression (function approximation): approximating an underlying linear f
 $$\hat{y_{i}} = \theta_{0} + \sum\limits_{k=1}^{K}\theta_kx_{ik} + \epsilon_{i}~~~i=1,2, \dots , N$$
 where $\theta_{0}$ is the interception and $\theta_{k}$ is the disturbance term or error variable.
 
+![[Pasted image 20220521213836.png]]![[Pasted image 20220521213854.png|350]]![[Pasted image 20220521213910.png|340]]
+
 #### Maximum Likelihood Estimation of Logistic Regression
 Solving logistic regression: we need to estimate the $K+1$ unknown parameters $\theta$ equation 1. 
 
 To find the maximum likelihood estimation we need to find the set of parameters for which the probability of the data is the greatest.
 
+![[Pasted image 20220521214111.png]]![[Pasted image 20220521214126.png]]
+
+Example:
+
+Let’s solve example 1 using logistic regression. Denoting hours spent as the independent variable x1 and the grades, i.e., fail or pass as binary dependent variable y. (1 means pass)
+
+![[Pasted image 20220521214422.png]]
+![[Pasted image 20220521214441.png]]
 # Extra
 
 ## Poisson Distribution
 Poisson Distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time or space if these events occur with a known constant mean rate and independently of the time since the last event. 
 $$f(x)=\frac{\lambda ^{x}}{x!}e^{- \lambda}$$
+
+## Dependent response variables
+The response variable is also known as the dependent (response) variable. The response variable depends on another factor known as the independent variable.
+Dependent variables are the outcome. The IVs explain the variability or causes changes in the DV. 
+
+**Example:**
+In an observational study about the effects of smoking, the researchers observe the subjects’ smoking status (smoker/non-smoker) and their lung cancer rates. It’s an observational study because they cannot randomly assign subjects to either the smoking or non-smoking group. In this study, the researchers want to know whether lung cancer rates depend on smoking status. Therefore, the lung cancer rate is the dependent variable.
+
+**Main assumptions for Logistic Regression**
+
+- Binary outcomes
+- Independent observations: observations are independent of each other. In other words, the observations should not come from repeated measurements or matched data.
+- Low or no multicollinearity among the independent variables: the independent variables are not too highly correlated with each other.
+- Linearity of independent variables and log odds. This does not mean logistic regression assumes the dependent and independent variables are related linearly.
+- A large sample size. To fit a logistic regression model, we need at least 10 cases with the least frequent outcome for each independent variable in your model. For example, if you have 5 independent variables and the expected probability of your least frequent outcome is .10, then you would need a minimum sample size of $10\times5/.10 = 500$
 
 ---
 Resources

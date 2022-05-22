@@ -1,6 +1,7 @@
 #Week6
 # Information theory - how to quantify information
 
+**If we want our answer in bits assume base 2 for the log but if not assume base 10**
 - Feature selection:
 	- Information theoretic feature selection: **conditional likelihood maximisation: a unifying framework for information theoretic feature selection**
 	- Clinical decision making: choose a test that provides the most information
@@ -83,7 +84,7 @@ This is used in machine learning such as supervised learning and reinforcement l
 For two discrete distributions $P$ and $Q$, cross entropy is defined as
 $$H(P,Q)=- \sum\limits_{x \in R_{X}}P(x)log~Q(x) = H(P)+D_{KL}(P||Q)$$
 ##### Jensen-Shannon divergence (JSD)
-A symmetrized and smoothed  version of the [[Information theory#Relative entropy - Kullback-Leibler divergence KL divergence| Kullback-Leibler divergence]] $D(P||Q)$. 
+A symmetrized and smoothed  version of the [[Information theory - Probabilistic machine learning#Relative entropy - Kullback-Leibler divergence KL divergence| Kullback-Leibler divergence]] $D(P||Q)$. 
 $$JSD(P||Q)=\frac{1}{2} D_{KL}(P||M)+ \frac{1}{2} D_{KL}(Q||M)$$ where $M=\frac{1}{2} (P+Q)$
 
 ##### Wassertein Distance - Earth Mover's distance - [[1904.08994.pdf | Generative Adversarial Networks]]
@@ -122,6 +123,10 @@ $$I(X;Y)=H(X,Y)-H(Y|X)-H(X|Y)$$
 	- $I(X;Y)$ not only increases with the dependence of $Y$ and $Y$but also with $H(X)$ and $H(Y)$
 - $I(X;Y)=H(X)-H(X|X)=0$
 
+Exercise
+![[Pasted image 20220521230909.png]]
+![[Pasted image 20220521230939.png|700]]
+![[Pasted image 20220521231029.png|700]]
 #Week7
 
 # Decision tree learning
@@ -156,10 +161,11 @@ similarity.
 The **Gini index** given a training dataset of $J$ classes
 $$I_{G}(p)=1- \sum\limits_{i=1}^{J}p_{i}^{2}$$ where $p_{i}$ is the fraction of items labelled with class $i$ in the dataset. 
 
-## Information gain
+## Information gain - mutual information
 **The information gain** is the information we can gain after spiting the samples based on a independent variable (internal node). Formally, **information gain** is defined as the change in information entropy $H$ from a prior state to a state that takes some information as given:
 $$IG(Y,X)=H(Y)=H(Y|X)$$ where $Y$ is a random variable that represents the dependent variable and $X$ is one of the independent variables, and $H(Y|X)$ is the conditional entropy of $Y$ given $X$.
 
+![[Pasted image 20220521232414.png]]![[Pasted image 20220521232428.png]]![[Pasted image 20220521232439.png]]![[Pasted image 20220521232450.png]]![[Pasted image 20220521232504.png]]![[Pasted image 20220521232512.png]]![[Pasted image 20220521232528.png]]![[Pasted image 20220521232537.png]]
 ## Decision trees
 
 For general discrete random variables with more them two values (categorical variables) and continuous random variables, we need to search the best value called **cut-off**, **cut point** or **threshold** that maximise the information gain.
@@ -171,8 +177,13 @@ For general discrete random variables with more them two values (categorical var
 **Solutions**: Decision tree ensembles:
 - Random forest
 - Gradient boosting such as **XGBoost**
+$$I(X;Y)=H(X)-H(X|Y)$$
+$$=H(Y)-H(Y|X)$$
+$$=D_{KL}(P(X,Y)||P(X)P(Y))$$
 
 Decision tree learning algorithms recursively use mutual information to select the independent variable that share the most information with the dependent variable, then split (make a decision) the samples based on the value of this independent variable.
+
+![[Pasted image 20220521232830.png]]
 
 ## Mutual information for feature selection
 We can use the mutual information to choose a optimal set of independent variables (features) that allow us to classify samples. 
@@ -212,6 +223,10 @@ Disadvantages:
 
 ![[Pasted image 20220413121954.png]]
 
+![[Pasted image 20220521234115.png]]
+![[Pasted image 20220521234131.png]]
+![[Pasted image 20220521234149.png]]
+
 ## Full joint distribution - Bayesian Network
 We define it as the product of the local conditional distributions:
 $$P(X_{1},X_{2}, \dots , X_{n}) = \prod_{i=1}^{n}P(X_{i}|Parents(X_{i}))$$
@@ -228,11 +243,13 @@ An edge represents a cause-effect relationship, called direct cause, or conditio
 $$P(W|R)$$
 
 ![[Pasted image 20220413124140.png]]
-
+![[Pasted image 20220521234941.png]]
 In general the random variables (nodes) fall into two groups:
 - **Observed variables**: the ones we have knowledge about
 - **Unobserved variables**: ones we do not know about and therefore have to infer the probability
 
+
+![[Pasted image 20220521235012.png]]![[Pasted image 20220521235035.png]]
 ## Conditional independence 
 
 Two random variables $A$ and $B$ are conditionally independent if they are independent given a third variable $C$, written as:
@@ -247,11 +264,13 @@ $$P(A,B,C)=P(C)P(A|C)P(B|A,C)$$
 
 ![[Pasted image 20220413132246.png]]
 
+Suppose $A$, $B$ and $C$ can take one of 2 values $\{0,1\}$. Modelling the complete joint distribution requires $1+2+4=7$ parameters. In contrast, using the [[Information theory - Probabilistic machine learning#Conditional independence|conditional independence]] we need $1+2+2=5$ parameters
 ## Markov Condition of Bayesian networks
 
 Each random variable  $X$ is conditionally independent of its non-descendants, given it's parents.
 
 ![[Pasted image 20220413133652.png]]
+![[Pasted image 20220521235431.png]]
 
 That means that structures such as this are not allowed:
 
@@ -271,3 +290,8 @@ Data science and machine learning should be used as a hypothesis (testing) not f
 - Separate test and training data and pre-process them separately 
 - Deal with the missing values (drop or get a median etc)
 - Categorical values how to represent them 
+
+
+![[Pasted image 20220521235504.png]]
+![[Pasted image 20220521235530.png]]
+![[Pasted image 20220521235540.png]]
